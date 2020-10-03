@@ -1,1 +1,1 @@
-# bevprog_drillek
+A fájlok a master branch-ben találhatóak.
