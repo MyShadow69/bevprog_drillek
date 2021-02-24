@@ -1,12 +1,33 @@
 #include "std_lib_facilities.h"
 
+
+
+/*
+double cm_to_m(double x)
+{
+	return x/100;
+}
+
+double in_to_m(double x)
+{
+	return x*(2.54/100);
+}
+
+double ft_to_m(double x)
+{
+	return x*(30.38/100);
+}*/
+
 int main()
 {
-	double a, small, big, num, temp, sum=0, met;
+	double a, small, big, num=0, temp, sum=0, met;
 	int count = 0;
 	bool x=true, y=true;
 	string unit;
 	vector <double> numbs;
+
+	//double cm_to_m = num/100, in_to_m = num*(2.54/100), ft_to_m = num*(30.48/100);
+
 
 	/*
 	while(cin>>a)
@@ -37,6 +58,7 @@ int main()
 
 	while(cin>>num>>unit)
 	{
+		double cm_to_m = num/100, in_to_m = num*(2.54/100), ft_to_m = num*(30.48/100);
 
 		if(unit=="m")
 		{
@@ -61,7 +83,7 @@ int main()
 		}
 		else if(unit=="cm")
 		{
-			met=num/100;
+			met = cm_to_m;
 			cout<<met<<" m\n";
 			if(y==true)
 			{
@@ -82,7 +104,7 @@ int main()
 		}
 		else if(unit=="in")
 		{
-			met = num*(2.54/100);
+			met = in_to_m;
 			cout<<met<<" m\n";
 			if(y==true)
 			{
@@ -103,7 +125,7 @@ int main()
 		}
 		else if(unit=="ft")
 		{
-			met = num*(30.48/100);
+			met = ft_to_m;
 			cout<<met<<" m \n";
 			if(y==true)
 			{
